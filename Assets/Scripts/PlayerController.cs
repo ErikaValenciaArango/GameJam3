@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float xRangen = -21;
 
     public GameObject projectilePrefab;
+    public AudioClip launchClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            AudioManager.Instance.PlaySFX(launchClip);
         }
 
         // Limitar el movimiento en el eje X
