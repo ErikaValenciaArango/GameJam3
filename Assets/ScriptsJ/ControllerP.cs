@@ -21,6 +21,7 @@ public class ControllerP : MonoBehaviour
     {
         if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0 )
         {
+            animator.SetInteger("Horizontal", 0);
             rb.velocity = Vector3.zero;
             return;
         }
