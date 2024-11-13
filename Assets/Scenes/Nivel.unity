@@ -402,9 +402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
+  verticalInput: 0
   speed: 40
-  xRange: 36
-  xRangen: -21
   projectilePrefab: {fileID: 643278338462678881, guid: 13a5e6de451ec124aa245869214023fd, type: 3}
   launchClip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
 --- !u!1001 &496460241
@@ -2225,7 +2224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.2
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2233,7 +2232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.4
+      value: -21.6
       objectReference: {fileID: 0}
     - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
       propertyPath: m_LocalRotation.w

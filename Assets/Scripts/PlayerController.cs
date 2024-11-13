@@ -5,9 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
     public float speed = 30.0f;
-    public float xRange = 36;
-    public float xRangen = -21;
+
+    // Rango en el eje X
+    private float xRange = 36.0f;
+    private float xRangen = -21.0f;
+
+    // Rango en el eje Z
+    private float zRange = 8.0f;
+    private float zRangen = -26.0f;
 
     public GameObject projectilePrefab;
     public AudioClip launchClip;
@@ -15,15 +22,19 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Movimiento en el eje X en espacio mundial
+        // Movimiento en el eje X
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed, Space.World);
+
+        // Movimiento en el eje Z
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed, Space.World);
 
         // Disparo de proyectiles
         if (Input.GetKeyDown(KeyCode.Space))
@@ -41,5 +52,16 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
+
+        // Limitar el movimiento en el eje Z
+        if (transform.position.z < zRangen)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRangen);
+        }
+        if (transform.position.z > zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
+        }
     }
 }
+
