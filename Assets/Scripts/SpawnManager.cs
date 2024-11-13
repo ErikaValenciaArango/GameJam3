@@ -27,7 +27,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnAnimalRandom()
     {
         int animalIndex = Random.Range(0, animalPrefab.Length);
-        Vector3 spanPos = new Vector3(Random.Range(limitXn, limitX), 0, limitZ);
+        Vector3 spanPos = new Vector3(Random.Range(limitXn, limitX), 4, limitZ);
         Instantiate(animalPrefab[animalIndex], spanPos, animalPrefab[animalIndex].transform.rotation);
     }
 }
