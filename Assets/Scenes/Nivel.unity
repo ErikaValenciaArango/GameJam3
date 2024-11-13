@@ -964,8 +964,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97d8150e43550143b653947acc4b11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
-  effectsSource: {fileID: 0}
+  musicSource: {fileID: 1584995060}
+  effectsSource: {fileID: 1656193699}
   master: {fileID: 0}
 --- !u!4 &1084992275
 Transform:
@@ -1425,9 +1425,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 48c50e89de834e0468794ae055590bc6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.22
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1540,9 +1540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08cbd5567cf7724595d3da64907858d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalPrefab:
-  - {fileID: 518060814315621415, guid: 036a8ff10b2c71f4db02d6b2d156222f, type: 3}
+  enemyPrefab:
   - {fileID: 6106899290697437225, guid: 7490f1ffe371abb44b5e8ad9319190bc, type: 3}
+  - {fileID: 518060814315621415, guid: 036a8ff10b2c71f4db02d6b2d156222f, type: 3}
   - {fileID: 5437716723433650931, guid: 9c062dc78bc666748afb700bd45a58b6, type: 3}
 --- !u!4 &1591348472
 Transform:
@@ -1956,6 +1956,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2688240811365779081, guid: 84a22fc53a0711841898c577d30823fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.4
