@@ -10,6 +10,7 @@ public class ControllerP : MonoBehaviour
     [SerializeField] private float limitY;
     private Rigidbody rb;
     private Animator animator;
+    public GameObject projectile;
 
     private void Start()
     {
@@ -19,6 +20,10 @@ public class ControllerP : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectile, transform.position, projectile.transform.rotation);
+        }
         if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0 )
         {
             animator.SetInteger("Horizontal", 0);
@@ -29,8 +34,7 @@ public class ControllerP : MonoBehaviour
         float valorX = Input.GetAxisRaw("Horizontal");
 
         animator.SetInteger("Horizontal", (int)valorX);
-       // transform.Translate(new Vector3(valorX * speed, 0, valorZ * speed) * Time.deltaTime);
-       rb.velocity = new Vector3 (valorX * speed, 0, valorZ * speed);
+        rb.velocity = new Vector3 (valorX * speed, 0, valorZ * speed);
 
     }
 }

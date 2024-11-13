@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848930237588800634}
-  m_Layer: 0
+  - component: {fileID: 7294719949336725194}
+  m_Layer: 7
   m_Name: Base
-  m_TagString: Untagged
+  m_TagString: Base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,6 +36,27 @@ Transform:
   - {fileID: 3564517029494737441}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7294719949336725194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581815646934134280}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.732578, y: 21.954416, z: 21.501783}
+  m_Center: {x: -0.59955025, y: 15.444137, z: -10.250892}
 --- !u!1001 &1610852926014191283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,6 +124,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: caaee80d0e6395e42a65d72365d30e7b, type: 3}
       propertyPath: m_Name
       value: Main_house_3lv (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caaee80d0e6395e42a65d72365d30e7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -181,6 +207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main_house_3lv (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caaee80d0e6395e42a65d72365d30e7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -259,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main_house_3lv (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caaee80d0e6395e42a65d72365d30e7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -336,6 +370,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: caaee80d0e6395e42a65d72365d30e7b, type: 3}
       propertyPath: m_Name
       value: Main_house_3lv (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: caaee80d0e6395e42a65d72365d30e7b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
