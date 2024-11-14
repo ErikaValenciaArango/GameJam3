@@ -20,7 +20,7 @@ public class CinematicEnd : MonoBehaviour
         // Cambia a la escena del men� principal cuando termine la cinem�tica
         if (pd == director)
         {
-            SceneManager.LoadScene("Nivel");
+            SceneManager.LoadScene("Menu");
         }
     }
 
@@ -42,7 +42,7 @@ public class CinematicEnd : MonoBehaviour
         }
 
 
-        SceneManager.LoadScene("Nivel");
+        SceneManager.LoadScene("Menu");
     }
 }
 
