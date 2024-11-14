@@ -270,6 +270,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d8cf9ba52095a4f4bb35e68774cfa634, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: d8cf9ba52095a4f4bb35e68774cfa634, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -292,7 +296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d8cf9ba52095a4f4bb35e68774cfa634, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: 54.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d8cf9ba52095a4f4bb35e68774cfa634, type: 3}
       propertyPath: m_LocalPosition.y
@@ -300,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d8cf9ba52095a4f4bb35e68774cfa634, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 75.2
+      value: 85.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d8cf9ba52095a4f4bb35e68774cfa634, type: 3}
       propertyPath: m_LocalRotation.w
@@ -377,11 +381,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4c6c90ea8679c4b9f4270019d37433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
   bulletPrefab: {fileID: 4236135470487450587, guid: 1fb2c24322ebab544bfefd173cb82c95, type: 3}
   player: {fileID: 0}
   canonIz: {fileID: 1785029905619020464}
   canonDe: {fileID: 4088861527287663633}
+  faseActual: 0
+  puedeCambiarFase: 0
+  tiempoEntreFase: 10
+  tiempoActual: 0
+  health: 2000
 --- !u!65 &293389737620997171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -428,7 +437,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!4 &8910319765707795877 stripped
 Transform:

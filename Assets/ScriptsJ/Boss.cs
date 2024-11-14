@@ -44,9 +44,9 @@ public class Boss : MonoBehaviour
 
     private void Embestida()
     {
-        transform.DOMoveZ(-5, 1.5f).OnComplete(() =>
+        transform.DOMoveZ(-40, 1.5f).OnComplete(() =>
         {
-            transform.DOMoveZ(75, 0.5f).OnComplete(() =>  
+            transform.DOMoveZ(48, 0.3f).OnComplete(() =>  
             {
                 CambioDeFase();
             });
@@ -68,7 +68,7 @@ public class Boss : MonoBehaviour
     }
     private void OnEnable()
     {
-        InvokeRepeating ("Shot", 2, 0.7f);
+        InvokeRepeating ("Shot", 2, 0.8f);
         tiempoActual = 0;       
     }
 

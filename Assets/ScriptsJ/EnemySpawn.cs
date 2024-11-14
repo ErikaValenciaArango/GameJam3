@@ -5,11 +5,11 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
-    private float spawnRangeX = 66;
-    private float spawnPosZ = 70;
+    [SerializeField] private float spawnRangeX = 66;
+    [SerializeField] private float spawnPosZ = 70;
     void Start()
     {
-        InvokeRepeating("SpawnRandomEnemy", 2, 1.5f);
+        InvokeRepeating("SpawnRandomEnemy", 2, 1);
     }
 
     // Update is called once per frame
@@ -22,7 +22,9 @@ public class NewBehaviourScript : MonoBehaviour
     {
         int enemyindex = Random.Range(0, enemyPrefabs.Length);
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 9, spawnPosZ);
-
-        Instantiate(enemyPrefabs[enemyindex], spawnPos, enemyPrefabs[enemyindex].transform.rotation);
+        if (GameManager.Instance.bossActivo == false) 
+        {
+            Instantiate(enemyPrefabs[enemyindex], spawnPos, enemyPrefabs[enemyindex].transform.rotation);
+        }
     }
 }

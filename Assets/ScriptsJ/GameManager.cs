@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     [SerializeField] private float timeBoss;
     public GameObject boss;
-    // Start is called before the first frame update
+    public bool bossActivo;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
+        bossActivo = false;
         StartCoroutine(TiempoParaBoss());
     }
 
     void ActivarBoss()
     {
         boss.SetActive(true);
+        bossActivo = true;
     }
 
     IEnumerator TiempoParaBoss()
@@ -22,4 +38,5 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(timeBoss);
         ActivarBoss();
     }
+
 }

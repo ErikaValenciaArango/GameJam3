@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
 
         }
-        if (collision.gameObject.CompareTag("Bala"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
         }

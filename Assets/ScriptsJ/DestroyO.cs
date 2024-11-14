@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DestroyObjects : MonoBehaviour
 {
-    private float topBound = 80;
-    private float lowerBound = -30;
+    private float topBound = 85;
+    private float lowerBound = -80;
     void Start()
     {
 

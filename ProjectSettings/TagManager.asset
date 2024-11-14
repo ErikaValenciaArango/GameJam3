@@ -10,6 +10,7 @@ TagManager:
   - Base
   - Bala
   - BulletBoss
+  - Boss
   layers:
   - Default
   - TransparentFX
