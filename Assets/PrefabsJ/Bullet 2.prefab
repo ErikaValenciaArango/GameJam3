@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4236135470487450586}
   - component: {fileID: 7751880090005186733}
   - component: {fileID: 2470066779631214045}
-  - component: {fileID: 244320712936746947}
   - component: {fileID: 9046324263184489482}
-  m_Layer: 0
+  - component: {fileID: 4578241295672593746}
+  m_Layer: 8
   m_Name: Bullet 2
-  m_TagString: Bullet
+  m_TagString: BulletBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4818455355453151938}
@@ -61,7 +61,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!135 &2470066779631214045
 SphereCollider:
@@ -84,19 +84,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.058610305
   m_Center: {x: 0, y: -0.0000000018626456, z: 0.00078611466}
---- !u!114 &244320712936746947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4236135470487450587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbd19af9bf63fb54eac66f90768d231c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 40
 --- !u!114 &9046324263184489482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849467430144cd441a037a44bd8f230f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4578241295672593746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236135470487450587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0405fc2b92091048a5520c1690986ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -40
 --- !u!1 &4818455355453151939
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4818455355453151938}
   - component: {fileID: 4878410725026273978}
   - component: {fileID: 5666109496542969951}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletMesh
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 6808064030493966835}
   - component: {fileID: 6851686983837516171}
   - component: {fileID: 5910865824721230702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

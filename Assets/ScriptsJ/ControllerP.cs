@@ -20,6 +20,24 @@ public class ControllerP : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetAxis("Horizontal") < 0 && transform.position.x < -limitX)
+        {
+            return;
+        }
+
+        if (Input.GetAxis("Horizontal") > 0 && transform.position.x > limitX)
+        {
+            return;
+        }
+        if (Input.GetAxis("Vertical") < 0 && transform.position.z < -5f)
+        {
+            return;
+        }
+
+        if (Input.GetAxis("Vertical") > 0 && transform.position.z > limitY)
+        {
+            return;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectile, transform.position, projectile.transform.rotation);
@@ -35,6 +53,13 @@ public class ControllerP : MonoBehaviour
 
         animator.SetInteger("Horizontal", (int)valorX);
         rb.velocity = new Vector3 (valorX * speed, 0, valorZ * speed);
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("BulletBoss"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
