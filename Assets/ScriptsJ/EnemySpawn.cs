@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class EnemySpawn : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
     [SerializeField] private float spawnRangeX = 66;
