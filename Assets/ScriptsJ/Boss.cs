@@ -56,7 +56,7 @@ public class Boss : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bala"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(collision.gameObject);
             health -= 5;

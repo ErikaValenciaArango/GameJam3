@@ -8,13 +8,17 @@ public class Bullet : MonoBehaviour
     GameObject lastExplotion;
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            lastExplotion = Instantiate(explotion, transform.position, transform.rotation);
+            Destroy(gameObject);
             return;
         }
-        lastExplotion=Instantiate(explotion, transform.position, transform.rotation);
-        Destroy(gameObject);
-        Destroy(lastExplotion, 1f);
+
     }
 
 
