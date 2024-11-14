@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Gun
+  - Enemy
+  - Base
+  - Bala
+  - BulletBoss
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -11,10 +18,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Base
+  - BulletEnemy
+  - Boss
   - 
   - 
   - 
