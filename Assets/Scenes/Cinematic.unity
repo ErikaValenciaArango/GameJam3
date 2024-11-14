@@ -795,8 +795,8 @@ GameObject:
   m_Component:
   - component: {fileID: 937365472}
   - component: {fileID: 937365471}
-  - component: {fileID: 937365473}
   - component: {fileID: 937365474}
+  - component: {fileID: 937365473}
   m_Layer: 0
   m_Name: Director
   m_TagString: Untagged
@@ -859,10 +859,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 937365470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97638e4df42427f43a74a40bd44f4b23, type: 3}
+  m_Script: {fileID: 11500000, guid: 9becb77f7e457a948bcfd66ee10aed21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  director: {fileID: 937365471}
+  playableDirector: {fileID: 937365471}
 --- !u!114 &937365474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,10 +872,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 937365470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9becb77f7e457a948bcfd66ee10aed21, type: 3}
+  m_Script: {fileID: 11500000, guid: 97638e4df42427f43a74a40bd44f4b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playableDirector: {fileID: 937365471}
+  director: {fileID: 937365471}
 --- !u!95 &1165519138 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9141952527618736061, guid: 891a22203c14eef4693182247f781293, type: 3}
