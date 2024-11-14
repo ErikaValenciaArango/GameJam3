@@ -11,6 +11,11 @@ public class ControllerP : MonoBehaviour
     [SerializeField] private float tiempoParaDisparar;
     [SerializeField] private float tiempoActual;
     [SerializeField] private int health;
+    [SerializeField] private bool puedeDispararDoble;
+    [SerializeField] private bool puedeDispararTriple;
+    [SerializeField] private GameObject canonI, canonC, canonD;
+    [SerializeField] private float duracionPowerUp;
+
     private Rigidbody rb;
     private Animator animator;
     public GameObject projectile;
@@ -19,10 +24,14 @@ public class ControllerP : MonoBehaviour
     public GameObject mesh;
     public int numberOfBinks = 5;
     public float blinkDuration = 0.1f;
+    
 
 
     private void Start()
     {
+        puedeDispararDoble = false;
+        puedeDispararTriple = false;
+
         puedeRecibirDano = true;
         health = 3;
         rb = GetComponent<Rigidbody>();
@@ -35,8 +44,7 @@ public class ControllerP : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && tiempoActual >= tiempoParaDisparar)
         {
-            Instantiate(projectile, transform.position, projectile.transform.rotation);
-            tiempoActual = 0;
+            Shot();
         }
 
         if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0 )
@@ -105,5 +113,66 @@ public class ControllerP : MonoBehaviour
             mesh.SetActive(true);
             yield return new WaitForSeconds(blinkDuration);
         }  
+    }
+
+    private void Shot()
+    {
+        if (puedeDispararDoble == false && puedeDispararTriple == false)
+        {
+            Instantiate(projectile, canonC.transform.position, projectile.transform.rotation);
+            tiempoActual = 0;
+        }
+
+        if (puedeDispararTriple)
+        {
+            Instantiate(projectile, canonI.transform.position, projectile.transform.rotation);
+            Instantiate(projectile, canonC.transform.position, projectile.transform.rotation);
+            Instantiate(projectile, canonD.transform.position, projectile.transform.rotation);
+            tiempoActual = 0;
+        }
+
+        if (puedeDispararDoble)
+        {
+            Instantiate(projectile, canonI.transform.position, projectile.transform.rotation);
+            Instantiate(projectile, canonD.transform.position, projectile.transform.rotation);
+            tiempoActual = 0;
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PowerUp"))
+        {
+            StopAllCoroutines();
+            PowerUps powerUpCollision = other.GetComponent<PowerUps>();
+            switch (powerUpCollision.powerUp)
+            {
+                case PowerUps.TipoPowerUp.speedGun:
+                    tiempoParaDisparar = 0.2f;
+                    break;
+
+                case PowerUps.TipoPowerUp.doubleGun:
+                    puedeDispararDoble = true;
+                    puedeDispararTriple = false;
+                    break;
+
+                case PowerUps.TipoPowerUp.tripleGun:
+                    puedeDispararTriple = true;
+                    puedeDispararDoble  = false;
+                    break;  
+            }
+
+            StartCoroutine(AcabarPowerUp());
+            Destroy(other.gameObject);
+
+        }
+    }
+
+    IEnumerator AcabarPowerUp()
+    {
+        yield return new WaitForSeconds (10);
+        tiempoParaDisparar = 0.5f;
+        puedeDispararDoble = false;
+        puedeDispararTriple = false;
     }
 }
